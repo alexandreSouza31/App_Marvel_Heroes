@@ -1,34 +1,30 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+  --black: #1a1a1a;
+}
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+* {
+  font-family: 'Roboto Mono', monospace;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
+body{
+  width: 100%;
+  min-height: 100vh;
+  margin: 0 auto;
+  background-color: #222;
+  color: whitesmoke;
 }
 
 a {
   font-weight: 500;
   color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+  text-decoration: none;
 }
 
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+a:hover {
+  color: #535bf2;
 }
 
 h1 {
@@ -36,34 +32,78 @@ h1 {
   line-height: 1.1;
 }
 
-button {
+form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+form input{
+  margin-bottom: 1rem;
+  width: 80%;
+}
+
+input {
+  border: none;
+  border: 1px solid var(--black);
+  border-radius: 4px;
+  padding: 0.4em 1em;
+
+  text-align: center;
+}
+
+input:focus {
+  box-shadow: 0 0 0 0;
+  outline: 0;
+}
+
+button,input[type=button],input[type=submit] {
   border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
+  border: none;
+  padding: 0.8em 1em;
+  margin: 1rem 0 0 .2rem;
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: var(--black);
   cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  color: whitesmoke;
+  border: 1px solid whitesmoke;
+  transition: .4s;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+button:hover,
+input[type=button]:hover,
+input[type=submit]:hover {
+  color: #646cff;
+  background-color: #111;
+  border-color: #646cff;
+}
+
+@media screen and (min-width:720px) {
+
+  form{
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
   }
-  a:hover {
-    color: #747bff;
+
+  form input{
+    width: 60%;
   }
-  button {
-    background-color: #f9f9f9;
+}
+
+@media screen and (min-width:1300px) {
+
+  form{
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+  }
+
+  form input{
+    width: 50%;
   }
 }
