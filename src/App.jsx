@@ -1,11 +1,14 @@
+//import { Outlet } from 'react-router-dom'
 import './App.css'
+import Home from './pages/Home'
 
 function App() {
 
   return (
     <>
-      <h1>App Marvel Heroes</h1>
-        
+      <h1>Marvel</h1>
+      <Home/>
+        {/* <Outlet /> */}
     </>
   )
 }
