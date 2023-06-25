@@ -1,0 +1,20 @@
+.home_container{
+    width: 100%;
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.heroe_card {
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    color: whitesmoke;
+}
+
+
+.heroe_card img {
+    width: 40vw;
+}
