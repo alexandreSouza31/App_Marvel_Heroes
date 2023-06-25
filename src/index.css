@@ -32,13 +32,13 @@ h1 {
   line-height: 1.1;
 }
 
-form{
+/* form{
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-top: 2rem;
-}
+} */
 
 form input{
   margin-bottom: 1rem;
@@ -84,26 +84,26 @@ input[type=submit]:hover {
 
 @media screen and (min-width:720px) {
 
-  form{
+  /* form{
     align-items: center;
     justify-content: center;
     height: 50vh;
-  }
+  } */
 
-  form input{
+  /* form input{
     width: 60%;
-  }
+  } */
 }
 
 @media screen and (min-width:1300px) {
 
-  form{
+  /* form{
     align-items: center;
     justify-content: center;
     height: 50vh;
-  }
+  } */
 
-  form input{
+  /* form input{
     width: 50%;
-  }
+  } */
 }
