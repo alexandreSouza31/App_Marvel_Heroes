@@ -1,0 +1,30 @@
+.nav_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: .5rem .5rem;
+    width: 100%;
+    background-color: #535bf2;
+}
+
+.nav_container h1{
+    color: whitesmoke;
+    font-size: 2.5rem;
+}
+.nav_form{
+    display: flex;
+    align-items: center;
+    margin-top: .5rem;
+}
+
+button{
+    margin-bottom: 2rem !important;
+}
+/* .nav_container h1{display: none;} */
+
+@media screen and (min-width:650px) {
+    .nav_container{
+        justify-content: space-between;
+    }
+}
