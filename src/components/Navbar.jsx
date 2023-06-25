@@ -1,17 +1,21 @@
 import { NavLink } from "react-router-dom";
 
+import { BsSearch } from "react-icons/bs";
+
+import "./Navbar.css";
 const Navbar = () => {
     return (
-        <nav>
-            <ul>
-                <li>
-                    <NavLink to="/">pag inicial</NavLink>
-                    <br />
-                    <NavLink to="/heroe/:id">heroi tal</NavLink>
-                    <br />
-                    <NavLink to="/search">pesqusar</NavLink>
-                </li>
-            </ul>
+        <nav className="nav_container">
+            <NavLink
+                className="nav_link"
+                to="/">
+                <h1>Marvel Heroes</h1>
+            </NavLink>
+
+            <form className="nav_form">
+                <input type="text" placeholder="pesquise um herói" />
+                <button type="submit"><BsSearch /></button>
+            </form>
         </nav>
     )
 }
