@@ -13,12 +13,13 @@ const url = `${base_url}?ts=${time_stamp}&apikey=${public_key}&hash=${hash}`;
 
 
 import "./Home.css"
+import HeroeCard from "../components/HeroeCard";
 const Home = () => {
     const [heroes, setHeroes] = useState([]);
 
 async function LoadHeroes(){
             const response = await getHeroes.get(`${url}`);
-            //console.log(response.data)
+            console.log(response.data.data.results)
             setHeroes(response.data.data.results)
         }
     useEffect(() => {
@@ -26,15 +27,17 @@ async function LoadHeroes(){
     }, [])
 
     return (
-        <div className="home-container">
+        <div className="home_container">
+            <div className="heroe_card">
                 {heroes.length === 0 && <p>carregando...</p>}
-                {heroes.map(character =>( 
-                   <div key={character.id}>
-                       <p >{character.name}</p>
-                        <img src={`${character.thumbnail.path}.${character.thumbnail.extension}`} alt="" />
-                   </div>
+                {heroes.map(character => <HeroeCard key={character.id} character={ character} />
+                //    <div className="" key={character.id}>
+                //        <h2>{character.name}</h2>
+                //         <img src={`${character.thumbnail.path}.${character.thumbnail.extension}`} alt="" />
+                //    </div>
                     
-                ))}
+                )}
+            </div>    
         </div>
     )
 }
