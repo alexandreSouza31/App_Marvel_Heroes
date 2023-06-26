@@ -71,7 +71,7 @@ input[type=submit] {
 button:hover,
 input[type=button]:hover,
 input[type=submit]:hover {
-  color: #646cff;
+  color: #E61C23;
   background-color: #111;
-  border-color: #646cff;
+  border-color: #E61C23;
 }
