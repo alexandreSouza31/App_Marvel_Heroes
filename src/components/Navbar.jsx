@@ -14,6 +14,10 @@ const Navbar = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
 
+        if (!search) {
+            alert("Digite algo para pesquisar!");
+            return;
+        }
         navigate(`/search?${param_search}`);
         setSearch("");
 
