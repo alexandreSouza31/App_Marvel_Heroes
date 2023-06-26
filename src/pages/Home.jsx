@@ -19,23 +19,20 @@ const Home = () => {
 
 async function LoadHeroes(){
             const response = await getHeroes.get(`${url}`);
-            console.log(response.data.data.results)
+            //console.log(response.data.data.results)
             setHeroes(response.data.data.results)
         }
     useEffect(() => {
-        //LoadHeroes();
+        LoadHeroes();
     }, [])
 
     return (
         <div className="home_container">
-            <div className="heroe_card">
+            <h2>Saiba mais sobre seus heróis favoritos!</h2>
+            <div className="home_card">
                 {heroes.length === 0 && <p>carregando...</p>}
                 {heroes.map(character => <HeroeCard key={character.id} character={ character} />
-                //    <div className="" key={character.id}>
-                //        <h2>{character.name}</h2>
-                //         <img src={`${character.thumbnail.path}.${character.thumbnail.extension}`} alt="" />
-                //    </div>
-                    
+        
                 )}
             </div>    
         </div>
