@@ -193,3 +193,51 @@ h3 {
     color: #E61C23;
     font-size: 1.3rem;
 }
+
+/* end search */
+
+/* start heroe */
+
+.heroe_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 70vh;
+   
+}
+
+.heroe_container .img_container{
+    max-width: 100vw;
+    width: 100vw;
+    border: none;
+
+}
+
+.heroe_card .container_heroe_card .link_heroe h3{
+    bottom: 16rem;
+    position: relative;
+    width: 90vw;
+    text-align: center;
+}
+
+.heroe_container .heroe_card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.heroe_container .heroe_card img{
+    /* width: 100vw; */
+    height: 70vh;
+    margin-top: 4rem;
+}
+
+
+.heroe_container img{
+    width: 100%;
+}
+
+.description{
+
+}
