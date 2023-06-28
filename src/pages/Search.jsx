@@ -7,7 +7,7 @@ import getHeroes from "../hooks/getHeroes";
 
 const public_key = import.meta.env.VITE_API_PUBLIC_KEY;
 const private_key = import.meta.env.VITE_API_PRIVATE_KEY;
-const base_url = "http://gateway.marvel.com/v1/public/characters";
+const base_url = import.meta.env.VITE_API_BASE_URL;
 
 const time_stamp = new Date().getTime();
 const hash = md5(time_stamp + private_key + public_key);
@@ -16,14 +16,14 @@ const Search = () => {
     const [searchParams] = useSearchParams();
     const [heroes, setHeroes] = useState([]);
     const results = searchParams.get("nameStartsWith");
-    
+
     const url = `${base_url}?nameStartsWith=${results}&ts=${time_stamp}&apikey=${public_key}&hash=${hash}`;
 
     async function findHeroes() {
         const response = await getHeroes.get(`${url}`)
-        
+
         setHeroes(response.data.data.results);
-       
+
     }
     useEffect(() => {
         findHeroes();

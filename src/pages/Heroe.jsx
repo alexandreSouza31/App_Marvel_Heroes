@@ -11,8 +11,7 @@ const private_key = import.meta.env.VITE_API_PRIVATE_KEY;
 
 const time_stamp = new Date().getTime();
 const hash = md5(time_stamp + private_key + public_key);
-const base_url = "http://gateway.marvel.com/v1/public/characters";
-
+const base_url = import.meta.env.VITE_API_BASE_URL;
 
 const Heroe = () => {
 
