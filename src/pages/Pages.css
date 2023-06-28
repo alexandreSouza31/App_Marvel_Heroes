@@ -69,7 +69,7 @@
 h3 {
     margin-top: .2rem;
     margin-bottom: 1rem;
-    max-height: 50px;
+    max-height: 70px;
 }
 
 .link_heroe a {
@@ -91,7 +91,8 @@ h3 {
     }
 
     .container_heroe_card {
-        height: 50vh;
+        min-height: 50vh;
+
     }
 
     .img_container {
@@ -132,13 +133,14 @@ h3 {
     h3 {
         font-size: 1rem;
     }
-    
+
     .link_heroe a {
         padding: .5rem 28%;
     }
 }
 
-@media screen and (min-width:900px){
+@media screen and (min-width:900px) {
+
     /*average 2 */
     .link_heroe a {
         padding: .5rem 35%;
@@ -164,7 +166,7 @@ h3 {
         align-items: center;
     }
 
-    .link_heroe{
+    .link_heroe {
         width: 20vw;
     }
 
@@ -177,7 +179,7 @@ h3 {
 @media screen and (min-width:1444px) {
     /* very large*/
 
-    .link_heroe{
+    .link_heroe {
         width: 20vw;
     }
 
@@ -185,11 +187,12 @@ h3 {
         padding: .5rem 26%;
     }
 }
+
 /* end heroeCard */
 
 /* start search */
 
-.result{
+.result {
     color: #E61C23;
     font-size: 1.3rem;
 }
@@ -198,46 +201,162 @@ h3 {
 
 /* start heroe */
 
-.heroe_container{
+.heroe_container {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    height: 70vh;
-   
-}
-
-.heroe_container .img_container{
-    max-width: 100vw;
-    width: 100vw;
-    border: none;
-
-}
-
-.heroe_card .container_heroe_card .link_heroe h3{
-    bottom: 16rem;
-    position: relative;
-    width: 90vw;
-    text-align: center;
-}
-
-.heroe_container .heroe_card{
-    display: flex;
-    flex-direction: column;
+    justify-content: space-around;
     align-items: center;
-    justify-content: center;
 }
 
-.heroe_container .heroe_card img{
-    /* width: 100vw; */
+h1 {
+    text-align: center;
+    margin: .5rem auto;
+}
+
+.heroe_container .container_heroe_card {
+    min-height: 70vh;
+}
+
+.heroe_container .img_container {
+    max-width: 100vw;
+    width: 80vw;
+    border: none;
+display: flex;
+}
+
+.heroe_container .heroe_card {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    /* margin-top: 4rem; */
+    width: 90vw;
+    height: 80vh;
+    /* background-color: red; */
+}
+
+.heroe_container .heroe_card img {
     height: 70vh;
-    margin-top: 4rem;
 }
 
-
-.heroe_container img{
+.heroe_container img {
     width: 100%;
 }
 
-.description{
+.description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: justify;
+    width: 50vw;
+}
 
+.description i {
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+
+@media screen and (max-width:290px) {
+    h1 {
+        font-size: 2rem !important;
+    }
+
+    .heroe_container .container_heroe_card {
+        min-height: 50vh;
+    }
+
+    .heroe_container img {
+        width: 100%;
+    }
+
+    .description{
+        width: 90vw;
+    }
+}
+
+
+@media screen and (max-width:360px) {
+
+    h1 {
+        font-size: 2rem !important;
+    }
+
+    .heroe_container .container_heroe_card {
+        min-height: 50vh;
+    }
+
+    .heroe_container .img_container {
+        width: 100%;
+    }
+
+    .heroe_container .heroe_card img {
+        height: 50vh;
+    }
+    .description{
+        width: 90vw;
+    }
+}
+
+@media screen and (min-width:361px) and (max-width:800px) {
+
+    h1 {
+        font-size: 2rem !important;
+    }
+
+    .heroe_container .container_heroe_card {
+        min-height: 50vh;
+    }
+
+    .heroe_container .img_container {
+        width: 100%;
+    }
+
+    .heroe_container .heroe_card img {
+        height: 50vh;
+    }
+
+    .description{
+        width: 90%;
+    }
+}
+
+@media screen and (min-width:801px) {
+    .heroe_container .img_container {
+        width: 40vw;
+        /* width: 100%; */
+    }
+
+    .heroe_container .container_heroe_card {
+        min-height: 50vh;
+    }
+
+    .heroe_container .heroe_card img {
+        height: 50vh;
+    }
+    .description{
+        width: 40%;
+        text-align: left;
+    }
+
+
+}
+@media screen and (min-width:1200px) {
+
+    .heroe_container .img_container {
+        width: 100%;
+    }
+
+    .heroe_container .container_heroe_card {
+        min-height: 50vh;
+    }
+
+    .heroe_container .heroe_card img {
+        height: 50vh;
+    }
+
+    .description{
+        /* width: 60%; */
+        text-align: left;
+    }
 }

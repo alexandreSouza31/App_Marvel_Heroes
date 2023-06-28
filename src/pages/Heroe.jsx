@@ -34,8 +34,8 @@ const Heroe = () => {
             <div className="heroe_container">
                 {character &&
                     (<>
-                    <div className="heroe_card">
                     <h1>{character.name}</h1>
+                    <div className="heroe_card">
 {/*falso pra não aparecer o nome nem o botão detalhes*/}
                             <HeroeCard character_name={false} character={character} showLink={false} />  
 
