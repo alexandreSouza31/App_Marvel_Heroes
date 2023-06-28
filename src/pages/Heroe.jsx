@@ -35,14 +35,24 @@ const Heroe = () => {
             <div className="heroe_container">
                 {character &&
                     (<>
-                        <div className="heroe_card">
-                            <HeroeCard character={character} showLink={false} />
-                            
-                            <p>
-                                Descrição do herói:
-                                <span>{character.description}</span>
-                            </p>
-                            
+                    <div className="heroe_card">
+                    <h1>{character.name}</h1>
+{/*falso pra não aparecer o nome nem o botão detalhes*/}
+                            <HeroeCard character_name={false} character={character} showLink={false} />  
+
+                            {character && character.description === " " ||  character.description === "" ?
+                                (
+                                    <p className="description not_found">
+                                        Descrição do herói:
+                                        <span> não encontrado!</span>
+                                    </p>
+
+                                ) : (
+                                    <p className="description">
+                                        <i>Descrição do herói:</i> 
+                                        <span> {character.description}</span>
+                                    </p>
+                                )}
                         </div>
 
                     </>)}
