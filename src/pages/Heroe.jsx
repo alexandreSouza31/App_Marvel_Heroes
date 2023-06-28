@@ -19,32 +19,35 @@ const Heroe = () => {
     const { id } = useParams();//pegar o id da url
     const [character, setCharacter] = useState(null);
     const url = `${base_url}/${id}?ts=${time_stamp}&apikey=${public_key}&hash=${hash}`;
-    //characters/1017100?apikey=0c36393870e115e681152a5959de86b8
 
 
     async function GetHero() {
         const response = await getHeroes.get(`${url}`);
         //console.log(response.data.data.results)
-        setCharacter(response)
+        setCharacter(response.data.data.results[0])
     }
     useEffect(() => {
         GetHero();
     }, [])
 
     return (
-        <div className="Heroe_page">
-            {character && (<>
-                {/* <HeroeCard character={character} /> */}
-                <div className="home_container">
-                    <h2>{character && <>{character.name}</>}</h2>
-                    
-                    <div className="home_card">
-                        
-                    </div>
-                </div>
-            </>
-            )}
-        </div>
+        <>
+            <div className="heroe_container">
+                {character &&
+                    (<>
+                        <div className="heroe_card">
+                            <HeroeCard character={character} showLink={false} />
+                            
+                            <p>
+                                Descrição do herói:
+                                <span>{character.description}</span>
+                            </p>
+                            
+                        </div>
+
+                    </>)}
+            </div>
+        </>
     )
 }
 
