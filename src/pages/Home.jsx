@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
-import getHeroes from "../hooks/getHeroes";
+import instanceAxios from "../services/instanceAxios";
 import md5 from "md5";
-//import keys from "../hooks/keys";
 import HeroeCard from "../components/HeroeCard";
 
 import "./Pages.css";
+import { HomeCard, HomeContainer } from "../components/Styled-components/HomeContainer";
 
 const public_key = import.meta.env.VITE_API_PUBLIC_KEY;
 const private_key = import.meta.env.VITE_API_PRIVATE_KEY;
@@ -17,7 +17,7 @@ const Home = () => {
     const [heroes, setHeroes] = useState([]);
 
     async function LoadHeroes() {
-        const response = await getHeroes.get(`${url}`);
+        const response = await instanceAxios.get(`${url}`);
         setHeroes(response.data.data.results)
     }
     useEffect(() => {
@@ -25,15 +25,15 @@ const Home = () => {
     }, [])
 
     return (
-        <div className="home_container">
+        <HomeContainer>
             <h2>Saiba mais sobre seus heróis favoritos!</h2>
-            <div className="home_card">
+            <HomeCard>
                 {heroes.length === 0 && <p>carregando...</p>}
                 {heroes.map(character => <HeroeCard key={character.id} character={character} />
 
                 )}
-            </div>
-        </div>
+            </HomeCard>
+            </HomeContainer>
     )
 }
 
