@@ -4,6 +4,7 @@ import { useSearchParams } from "react-router-dom";
 import md5 from "md5";
 import HeroeCard from "../components/HeroeCard";
 import getHeroes from "../services/instanceAxios";
+import { Card, Container, Result } from "../components/Styled-components/HomeAndSearchStyles";
 
 const public_key = import.meta.env.VITE_API_PUBLIC_KEY;
 const private_key = import.meta.env.VITE_API_PRIVATE_KEY;
@@ -27,15 +28,15 @@ const Search = () => {
     }
     useEffect(() => {
         setLoad(false);
-        findHeroes();
+        //findHeroes();
 
     }, [results])
 
     return (
-        <div className="home_container">
+        <Container>
             <h2>
                 Resultados para
-                <span className="result"> {results}</span>
+                <Result> {results}</Result>
             </h2>
             {load === true ?
                 (<>
@@ -43,14 +44,14 @@ const Search = () => {
                     <p>carregando...</p>
                 </>
                 ) : (
-                    <div className="home_card">
+                    <Card>
                         {heroes.map(character => <HeroeCard key={character.id} character={character} />
 
                         )}
-                    </div>
+                    </Card>
                 )}
 
-        </div>
+        </Container>
     )
 }
 
