@@ -6,12 +6,14 @@ import App from './App.jsx'
 import Home from './pages/Home.jsx'
 import Heroe from './pages/Heroe.jsx'
 import Search from './pages/Search.jsx'
+import { GlobalStyle } from './components/Styled-components/GlobalStyles.jsx'
 
-import './index.css'
+//import './index.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
  
+    <GlobalStyle/>
     <BrowserRouter>
       <div>
         <Routes>
@@ -23,7 +25,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
           </Route>
         </Routes>
       </div>
-
     </BrowserRouter>
   </React.StrictMode>,
 )
