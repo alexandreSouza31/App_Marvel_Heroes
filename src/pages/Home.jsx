@@ -4,7 +4,7 @@ import md5 from "md5";
 import HeroeCard from "../components/HeroeCard";
 
 import "./Pages.css";
-import { HomeCard, HomeContainer } from "../components/Styled-components/HomeContainer";
+import { Card, Container } from "../components/Styled-components/HomeAndSearchStyles";
 
 const public_key = import.meta.env.VITE_API_PUBLIC_KEY;
 const private_key = import.meta.env.VITE_API_PRIVATE_KEY;
@@ -25,15 +25,15 @@ const Home = () => {
     }, [])
 
     return (
-        <HomeContainer>
+        <Container>
             <h2>Saiba mais sobre seus heróis favoritos!</h2>
-            <HomeCard>
+            <Card>
                 {heroes.length === 0 && <p>carregando...</p>}
                 {heroes.map(character => <HeroeCard key={character.id} character={character} />
 
                 )}
-            </HomeCard>
-            </HomeContainer>
+            </Card>
+            </Container>
     )
 }
 
