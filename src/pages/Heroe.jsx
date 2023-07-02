@@ -4,7 +4,10 @@ import HeroeCard from "../components/HeroeCard";
 import instanceAxios from "../services/instanceAxios";
 import md5 from "md5";
 
-import "./Pages.css";
+//import "./Pages.css";
+import { Card, ComicCard, ComicContainer, Description, HeroeContainer, Hr } from "../components/Styled-components/HeroeStyles";
+import { HeroeCardContainer} from "../components/Styled-components/HeroeStyles";
+
 
 const public_key = import.meta.env.VITE_API_PUBLIC_KEY;
 const private_key = import.meta.env.VITE_API_PRIVATE_KEY;
@@ -40,51 +43,54 @@ const Heroe = () => {
 
     useEffect(() => {
         GetHero();
-        GetComics()
+        GetComics();
     }, [])
-
-
 
     return (
         <>
-            <div className="heroe_container">
+            <HeroeContainer>
                 {character &&
                     (<>
                         <h1>{character.name}</h1>
-                        <div className="heroe_card">
+                        <Card>
                             {/*falso pra não aparecer o nome nem o botão detalhes*/}
-                            <HeroeCard character_name={false} character={character} showLink={false} />
+
+                            <HeroeCardContainer>
+                                <HeroeCard character_name={false} character={character} showLink={false} />
+                            </HeroeCardContainer>
 
                             {character && character.description === " " || character.description === "" ?
                                 (
-                                    <p className="description not_found">
-                                        Descrição do herói:
+                                    <Description>
+                                        <h3>Descrição do herói:</h3>
                                         <span> não encontrado!</span>
-                                    </p>
+                                    </Description>
 
                                 ) : (
-                                    <p className="description">
-                                        <i>Descrição do herói:</i>
+                                    <Description>
+                                        <h3><i>Descrição do herói:</i></h3>
                                         <span> {character.description}</span>
-                                    </p>
+                                    </Description>
                                 )}
-                        </div>
+                        </Card>
 
                     </>)}
-            </div>
-            <div>
+            </HeroeContainer>
+            <Hr />
+            <ComicContainer>
                 <h3>Showed up on the comics series:</h3>
                 {dataComics !== null && dataComics.map(comics =>
 
-                    <div key={comics.id}>
-                        <h1>{comics?.creators.collectionURL}</h1>
-                        <h4>{ comics.title}</h4>
-                        <img src={`${comics?.thumbnail.path}.${comics.thumbnail.extension}`} alt={`Thumbnail of ${comics.title} comic`} />
-                    </div>
+                    <ComicCard key={comics.id}>
+                        <div>
+                            <h4>{comics.title}</h4>
+                            <img src={`${comics?.thumbnail.path}.${comics.thumbnail.extension}`} alt={`Thumbnail of ${comics.title} comic`} />
+                        </div>
+                    </ComicCard>
                 )}
 
 
-            </div>
+            </ComicContainer>
         </>
     )
 }

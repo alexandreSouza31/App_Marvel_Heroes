@@ -3,7 +3,6 @@ import instanceAxios from "../services/instanceAxios";
 import md5 from "md5";
 import HeroeCard from "../components/HeroeCard";
 
-import "./Pages.css";
 import { Card, Container } from "../components/Styled-components/HomeAndSearchStyles";
 
 const public_key = import.meta.env.VITE_API_PUBLIC_KEY;

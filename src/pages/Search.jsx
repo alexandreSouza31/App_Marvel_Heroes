@@ -28,7 +28,7 @@ const Search = () => {
     }
     useEffect(() => {
         setLoad(false);
-        //findHeroes();
+        findHeroes();
 
     }, [results])
 

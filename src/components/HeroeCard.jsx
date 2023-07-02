@@ -1,4 +1,4 @@
-import { HeroeCardContainer, ImgContainer, LinkContainer, Linkbtn } from "./Styled-components/HeroeCardStyles";
+import { HeroeCardContainer, LinkContainer, Linkbtn } from "./Styled-components/HeroeCardStyles";
 
 const HeroeCard = ({ character, character_name = true, showLink = true }) => {
     return (
