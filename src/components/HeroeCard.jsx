@@ -1,21 +1,22 @@
-import { Link } from "react-router-dom";
+import { HeroeCardContainer, ImgContainer, LinkContainer, Linkbtn } from "./Styled-components/HeroeCardStyles";
 
-const HeroeCard = ({ character,character_name=true, showLink = true }) => {
+const HeroeCard = ({ character, character_name = true, showLink = true }) => {
     return (
-        <div className="container_heroe_card">
-            <div key={character.id} className="img_container">
+        <HeroeCardContainer key={character.id}>
+            {/* <ImgContainer > */}
                 <img src={`${character.thumbnail.path}.${character.thumbnail.extension}`} alt={character.name} />
-            </div>
-            <div className="link_heroe">
+            {/* </ImgContainer> */}
+            <LinkContainer>
                 {character_name &&
                     <h3>{character.name}</h3>
                 }
                 {showLink &&
-                    <Link to={`/heroe/${character.id}`}>{/*mesmo estilo da url do main.jsx*/}
-                        Ver mais
-                    </Link>}
-            </div>
-        </div>
+                    <Linkbtn to={`/heroe/${character.id}`}>{/*mesmo estilo da url do main.jsx*/}
+
+                        Details
+                    </Linkbtn>}
+            </LinkContainer>
+        </HeroeCardContainer>
     )
 }
 
