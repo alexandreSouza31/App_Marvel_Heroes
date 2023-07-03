@@ -35,10 +35,9 @@ const Heroe = () => {
     async function GetComics() {
         const url = `${base_url}/${id}/comics?ts=${time_stamp}&apikey=${public_key}&hash=${hash}`;
         const response = await instanceAxios.get(`${url}`);
-        setDataComics(response.data.data.results)
+        setDataComics(response.data.data.results);
     }
 
-    //setDataComics(data.data.data)
     //end comics
 
     useEffect(() => {
@@ -79,6 +78,7 @@ const Heroe = () => {
             <Hr />
             <ComicContainer>
                 <h3>Showed up on the comics series:</h3>
+                {dataComics && dataComics.length === 0?(<p>Not found</p>):("")}
                 {dataComics !== null && dataComics.map(comics =>
 
                     <ComicCard key={comics.id}>
@@ -88,7 +88,6 @@ const Heroe = () => {
                         </div>
                     </ComicCard>
                 )}
-
 
             </ComicContainer>
         </>
