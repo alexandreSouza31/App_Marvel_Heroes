@@ -2,6 +2,7 @@ import { NavLink, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { BsSearch } from "react-icons/bs";
 import { HeaderStyles } from "./Styled-components/HeaderStyles";
+import Message from "./Message";
 
 
 const Header = () => {
@@ -10,17 +11,19 @@ const Header = () => {
     const param_search = `nameStartsWith=${search}`;
 
     const navigate = useNavigate();
+    const [message, setMessage] = useState("");
 
     const handleSubmit = (e) => {
+        setMessage("");
         e.preventDefault();
-
+        //console.log(message)
+        
         if (!search) {
-            alert("Digite algo para pesquisar!");
+            setMessage("Digite algo para pesquisar!");
             return;
         }
         navigate(`/search?${param_search}`);
         setSearch("");
-
     }
 
     return (
@@ -40,6 +43,8 @@ const Header = () => {
                 />
                 <button type="submit"><BsSearch /></button>
             </form>
+            {message && <Message msg={<p>{message}</p>}></Message>}
+
         </HeaderStyles>
     )
 }
