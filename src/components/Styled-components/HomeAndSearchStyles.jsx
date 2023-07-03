@@ -23,7 +23,6 @@ text-align: center;
 color: whitesmoke;
 margin-top: 1rem;
 
-
 & img {
     width: 44vw;
     height: 30vh;

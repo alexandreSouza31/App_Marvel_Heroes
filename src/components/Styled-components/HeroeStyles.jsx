@@ -14,12 +14,12 @@ align-items: center;
 
 & img{
     width: 100%;
-    min-height: 150px !important;
+    min-height: 150px  ;
 }
 
 @media screen and (max-width:320px)  {
    /* very small */ 
-   min-height:100vh !important;
+   min-height:100vh  ;
 
    }
 
@@ -38,7 +38,7 @@ align-items: center;
 
 @media screen and (min-width:480px)  {
     & img{
-        max-height: 60vh !important;
+        max-height: 35vh  ;
     }
     
 }
@@ -47,9 +47,8 @@ align-items: center;
     /*average */
     
     & img{
-    min-height: 40vh !important;
 
-    height: 40vh !important;
+    height: 40vh;
     }
 
 @media screen and (min-width:1200px){
@@ -57,10 +56,10 @@ align-items: center;
 
     & img{
     max-width:30vw;
-    height: 40vh !important;
+    height: 40vh  ;
 
     width: 30vw;
-    min-height: 45vh !important;
+    min-height: 45vh  ;
         }
     }
 }
@@ -75,6 +74,7 @@ flex-wrap: wrap;
 justify-content: center;
 align-items: start;
 margin-bottom: 2rem;
+margin-top: 2rem;
 width: 90vw;
 min-height: 20vh;
 
@@ -88,8 +88,9 @@ border:2px solid #E61C23;
 
 @media screen and (max-width:479px) {
     /*small */   
-     min-height: 50vh!important;
-     margin-bottom: 0rem !important;
+     min-height: 50vh ;
+     margin-bottom: 0rem  ;margin-top: 0rem;
+
 
      & img{
         max-width:fit-content;
@@ -109,13 +110,13 @@ border:2px solid #E61C23;
 }
 
 @media screen and (max-height:300px){
-    height: 100vh !important;
+    height: 100vh  ;
 }
 
 
 @media screen and (min-width:800px){
-    min-height: 40vh !important;
-    margin-bottom: 2rem !important;
+    min-height: 40vh  ;
+    margin-bottom: 2rem  ;
 }
 
 @media screen and (min-width:1200px){
@@ -134,7 +135,7 @@ border:2px solid #E61C23;
 
 export const HeroeCardContainer = styled.div`
 display: flex;
-height: 40vh !important;
+height: 40vh  ;
 
 & img{
     min-height: 30vh;
@@ -150,7 +151,7 @@ margin-top:2rem;    }
 }
 
 @media screen and (max-height:300px){
-    height: 40vh !important;
+    height: 40vh  ;
 }
 
 @media screen and (min-width:692px) {
@@ -173,7 +174,7 @@ height: 50vh;
 `
 
 export const NotDescription = styled.p`
-margin-top: 6rem;
+margin-top: 4rem;
 margin-left:.5rem;
 `
 
@@ -194,7 +195,7 @@ width: 80vw;
 }
 
 @media screen and (max-height:300px){
-    margin-top:5rem !important;
+    margin-top:5rem  ;
 
     & span{
     overflow-y: scroll;
@@ -206,13 +207,13 @@ width: 80vw;
     /*small */  
      margin-top:0rem;
     margin-bottom:0rem;
-    min-height: 30vh !important;
+    min-height: 30vh  ;
     text-align: center;
 }
 
 @media screen and (min-width:480px){
 width: 45%;
-min-height: 40vh !important;
+min-height: 40vh  ;
 margin-left: .5rem;
 height: 100px;
     
@@ -223,33 +224,12 @@ margin-top: 2rem;
 
 }
 
-@media screen and (min-width:611px){
-& span{
-    overflow-y: hidden;
-    }    
-}
-
-
 @media screen and (min-width:1200px){
     /*large */
-    max-width: 40vw !important;
+    max-width: 40vw  ;
     margin-left: 0;
 }
-
 `
-// export const NotFound = styled.span`
-
-// @media screen and (max-width:479px) {
-//     /*small */
-// }
-
-// @media screen and (min-width:1200px){
-//     /*large */
-
-// }
-
-// `
-
 export const ComicContainer = styled.div`
 
 display: flex;
@@ -278,15 +258,12 @@ margin-top:3rem;
     width: 22vw;
     border-radius:4px;
     }
-
 }
 
 `
 
-export const ComicCard = styled.div`/**PRECISO ARRUMAR!! */
+export const ComicCard = styled.div`
 
-/* display: grid;
-grid-template-columns: 1fr 1fr; */
 display:flex;
 flex-direction: row;
 justify-content: center;

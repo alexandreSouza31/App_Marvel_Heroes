@@ -5,7 +5,7 @@ export const HeroeCardContainer = styled.div`
 
 display: flex;
 flex-direction: column;
-justify-content: center;
+justify-content: space-between;
 align-items: center;
 margin-bottom: 0rem;
 
