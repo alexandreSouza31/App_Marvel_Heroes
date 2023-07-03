@@ -5,7 +5,7 @@ import instanceAxios from "../services/instanceAxios";
 import md5 from "md5";
 
 //import "./Pages.css";
-import { Card, ComicCard, ComicContainer, Description, HeroeContainer, Hr } from "../components/Styled-components/HeroeStyles";
+import { Card, ComicCard, ComicContainer, Description, HeroeContainer, Hr, NotDescription } from "../components/Styled-components/HeroeStyles";
 import { HeroeCardContainer} from "../components/Styled-components/HeroeStyles";
 
 
@@ -61,10 +61,10 @@ const Heroe = () => {
 
                             {character && character.description === " " || character.description === "" ?
                                 (
-                                    <Description>
+                                    <NotDescription>
                                         <h3>Descrição do herói:</h3>
                                         <span> não encontrado!</span>
-                                    </Description>
+                                    </NotDescription>
 
                                 ) : (
                                     <Description>

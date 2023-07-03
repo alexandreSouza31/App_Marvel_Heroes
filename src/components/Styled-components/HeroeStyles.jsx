@@ -89,7 +89,7 @@ border:1px solid #E61C23;
 @media screen and (max-width:479px) {
     /*small */   
      min-height: 50vh!important;
-     margin-bottom: 6rem !important;
+     margin-bottom: 0rem !important;
 
      & img{
         max-width:fit-content;
@@ -169,6 +169,11 @@ height: 50vh;
     }
 }
 
+`
+
+export const NotDescription = styled.p`
+margin-top: 6rem;
+margin-left:.5rem;
 `
 
 export const Description = styled.p`
