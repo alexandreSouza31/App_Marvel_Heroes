@@ -2,7 +2,7 @@ import { NavLink, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { BsSearch } from "react-icons/bs";
 
-import "./Navbar.css";
+import { Header } from "./Styled-components/HeaderStyles";
 
 const Navbar = () => {
     
@@ -24,7 +24,7 @@ const Navbar = () => {
     }
 
     return (
-        <nav className="nav_container">
+        <Header>
             <NavLink
                 className="nav_link"
                 to="/">
@@ -40,7 +40,7 @@ const Navbar = () => {
                 />
                 <button type="submit"><BsSearch /></button>
             </form>
-        </nav>
+        </Header>
     )
 }
 
