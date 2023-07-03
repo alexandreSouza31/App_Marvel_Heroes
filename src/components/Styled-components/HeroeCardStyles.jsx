@@ -37,43 +37,7 @@ width: 46vw;
 }
 
 `
-// export const ImgContainer = styled.div`
-// border: 2px solid gray;
-// max-width: 45vw;
-// height: 30.5vh;
-// border-radius: 4px;
-// transition: .4s;
 
-// & img{
-
-//     border: 2px solid gray;
-// }
-
-// & img:hover{
-//     border-color: #E61C23;
-// }
-
-// @media screen and (max-width:360px) {
-//     /* small*/
-// width: 46vw;
-//     & img {
-//         height: 30vh;
-//     }
-
-// @media screen and (min-width:600px) {
-//     /* average*/
-// width: 29.5vw;
-// height: 30vh; 
-//     }
-
-// @media screen and (min-width:1200px){
-//     /*large */
-//     width: 20vw;
-//     height: 50vh;
-//     }
-// }
-
-// `
 export const LinkContainer = styled.div`
 display: flex;
 flex-direction: column;

@@ -145,11 +145,12 @@ height: 40vh  ;
 }
 
 @media screen and (min-width:480px) {
-/* small*/
+/* average*/
 align-items: start;
 min-height: 40vh; 
 & img{
-margin-top:2rem;    }
+margin-top:2rem;
+}
     
 }
 
@@ -158,7 +159,7 @@ margin-top:2rem;    }
 }
 
 @media screen and (min-width:692px) {
-/* small*/
+/* average*/
 
 & img{
 margin-top:0rem;

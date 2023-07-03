@@ -8,7 +8,6 @@ import Heroe from './pages/Heroe.jsx'
 import Search from './pages/Search.jsx'
 import { GlobalStyle } from './components/Styled-components/GlobalStyles.jsx'
 
-//import './index.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
