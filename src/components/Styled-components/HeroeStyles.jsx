@@ -116,6 +116,9 @@ border:2px solid #E61C23;
 @media screen and (min-width:800px){
     min-height: 40vh  ;
     margin-bottom: 2rem  ;
+    align-items: center;
+
+
     & img{
         width:fit-content;
         
@@ -186,7 +189,7 @@ text-align: center;
     margin: 4rem 0;
 
 }
-@media screen and (min-width:573px){
+@media screen and (min-width:573px) and (max-width:820px) {
     width: 100%;
 }
 `
@@ -239,7 +242,8 @@ margin-top: 2rem;
 
 @media screen and (min-width:1200px){
     /*large */
-    max-width: 40vw  ;
+    max-width: 40vw;
     margin-left: 0;
+    margin: 0 auto;
 }
 `
