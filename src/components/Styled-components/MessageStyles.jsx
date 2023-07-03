@@ -2,7 +2,7 @@ import styled from "styled-components"
 
 export const Dialog = styled.dialog`
 width: 95vw;
-height: 20vh;
+height: 15vh;
 display: flex;
 flex-direction: column;
 align-items: center;
@@ -11,7 +11,8 @@ margin: 0 auto;
 position: absolute;
 top:20%;
 text-align: center;
-background-color: #0000009d;
+background-color: #000000be;
+border-radius: 4px;
 
 & p{
     text-align: center;

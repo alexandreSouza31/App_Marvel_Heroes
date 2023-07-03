@@ -16,10 +16,9 @@ const Header = () => {
     const handleSubmit = (e) => {
         setMessage("");
         e.preventDefault();
-        //console.log(message)
         
         if (!search) {
-            setMessage("Digite algo para pesquisar!");
+            setMessage("Type something to search!");
             return;
         }
         navigate(`/search?${param_search}`);
