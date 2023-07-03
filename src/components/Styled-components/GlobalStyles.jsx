@@ -16,6 +16,21 @@ body {
   color: whitesmoke;
 }
 
+body::-webkit-scrollbar,span::-webkit-scrollbar {
+  width: 12px;               /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track,span::-webkit-scrollbar-track {
+  background: #333;        /* color of the tracking area */
+  border-radius: 5px;
+}
+
+body::-webkit-scrollbar-thumb,span::-webkit-scrollbar-thumb {
+  background-color:whitesmoke;    /* color of the scroll thumb */
+  border-radius: 20px;       /* roundness of the scroll thumb */
+  border: 2px solid #E61C23;  /* creates padding around scroll thumb */
+}
+
 a {
   text-decoration: none;
 }
