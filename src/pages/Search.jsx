@@ -23,21 +23,21 @@ const Search = () => {
 
     async function findHeroes() {
         const response = await getHeroes.get(`${url}`)
-
         setHeroes(response.data.data.results);
     }
     useEffect(() => {
         setLoad(false);
         findHeroes();
-
+        
     }, [results])
-
+    
     return (
         <Container>
             <h2>
                 Results for
                 <Result> {results}</Result>
             </h2>
+                {heroes.length === 0 ?(<p>Not found!</p>):("")}
             {load === true ?
                 (<>
 
