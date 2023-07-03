@@ -48,6 +48,14 @@ background-color: #E61C23;
     }
 }
 
+@media screen and (max-width:428px) {
+
+    & img {
+        margin: .5rem auto;
+    }
+    
+}
+
 @media screen and (min-width:650px) {
         justify-content: space-between;
         min-height: 10vh;

@@ -2,6 +2,8 @@ import { NavLink, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { BsSearch } from "react-icons/bs";
 import Message from "./Message";
+import logo from "../../public/logo.png"
+
 import { HeaderStyles } from "./Styled-components/layoutStyles/HeaderStyles";
 
 
@@ -32,7 +34,7 @@ const Header = () => {
                 to="/">
                 <h1>Marvel Heroes</h1>
             </NavLink>
-
+            <img src={logo} />
             <form onSubmit={handleSubmit} className="nav_form">
                 <input
                     type="text"
