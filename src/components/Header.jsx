@@ -19,7 +19,7 @@ const Header = () => {
         setMessage("");
         e.preventDefault();
         
-        if (!search) {
+        if (setSearch==="") {
             setMessage("Type something to search!");
             return;
         }
@@ -32,13 +32,13 @@ const Header = () => {
             <NavLink
                 className="nav_link"
                 to="/">
-                <h1>Marvel Heroes</h1>
+                <h1>Marvel</h1>
             </NavLink>
             <img src={logo} />
             <form onSubmit={handleSubmit} className="nav_form">
                 <input
                     type="text"
-                    placeholder="pesquise um herói"
+                    placeholder="search a character"
                     onChange={(e) => setSearch(e.target.value)}
                     value={search}
                 />

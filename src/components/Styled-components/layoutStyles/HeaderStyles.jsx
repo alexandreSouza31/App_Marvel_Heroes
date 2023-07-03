@@ -2,7 +2,7 @@ import styled from "styled-components"
 
 export const HeaderStyles = styled.header`
 display: flex;
-justify-content: center;
+justify-content: space-between;
 align-items: center;
 flex-wrap: wrap;
 padding: 2rem .5rem !important;
@@ -41,7 +41,7 @@ background-color: #E61C23;
 }
 
 @media screen and (max-width:360px) {
-        min-height: 20vh;
+    min-height: 20vh;
 
     & h1 {
         font-size: 2rem;
@@ -49,16 +49,23 @@ background-color: #E61C23;
 }
 
 @media screen and (max-width:428px) {
+margin: 0 auto;
+justify-content: center;
 
     & img {
         margin: .5rem auto;
+        width: 50px;
+    }
+    
+    & input{
+        width: 150px;
     }
     
 }
 
 @media screen and (min-width:650px) {
         justify-content: space-between;
-        min-height: 10vh;
+        min-height: 5vh;
     
 }
 `
