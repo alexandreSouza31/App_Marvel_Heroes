@@ -35,13 +35,13 @@ const Search = () => {
     return (
         <Container>
             <h2>
-                Resultados para
+                Results for
                 <Result> {results}</Result>
             </h2>
             {load === true ?
                 (<>
 
-                    <p>carregando...</p>
+                    <p>loading...</p>
                 </>
                 ) : (
                     <Card>

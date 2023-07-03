@@ -25,9 +25,9 @@ const Home = () => {
 
     return (
         <Container>
-            <h2>Saiba mais sobre seus heróis favoritos!</h2>
+            <h2>Meet your favorite characters!</h2>
             <Card>
-                {heroes.length === 0 && <p>carregando...</p>}
+                {heroes.length === 0 && <p>loading...</p>}
                 {heroes.map(character => <HeroeCard key={character.id} character={character} />
 
                 )}

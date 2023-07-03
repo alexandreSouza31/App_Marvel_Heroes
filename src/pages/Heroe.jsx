@@ -62,13 +62,13 @@ const Heroe = () => {
                             {character && character.description === " " || character.description === "" ?
                                 (
                                     <NotDescription>
-                                        <h3>Descrição do herói:</h3>
-                                        <span> não encontrado!</span>
+                                        <h3>character description:</h3>
+                                        <span> Not found!</span>
                                     </NotDescription>
 
                                 ) : (
                                     <Description>
-                                        <h3><i>Descrição do herói:</i></h3>
+                                        <h3><i>character description:</i></h3>
                                         <span> {character.description}</span>
                                     </Description>
                                 )}
