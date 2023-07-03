@@ -8,6 +8,7 @@ import md5 from "md5";
 import { Card, Description, HeroeContainer, NotDescription } from "../components/Styled-components/HeroeStyles";
 import { HeroeCardContainer} from "../components/Styled-components/HeroeStyles";
 import { ComicCard, ComicContainer, Hr } from "../components/Styled-components/ComicStyles";
+import Loading from "../components/Loading";
 
 
 const public_key = import.meta.env.VITE_API_PUBLIC_KEY;
@@ -22,7 +23,7 @@ const Heroe = () => {
     const { id } = useParams();//pegar o id da url
     const [character, setCharacter] = useState(null);
     const [dataComics, setDataComics] = useState(null);
-
+    const [removeLoading, setRemoveLoading] = useState(false);
 
     async function GetHero() {
         const url = `${base_url}/${id}?ts=${time_stamp}&apikey=${public_key}&hash=${hash}`;
@@ -39,14 +40,20 @@ const Heroe = () => {
 
     //end comics
 
+    setTimeout(() => {
+        setRemoveLoading(true)
+    }, 3000);
+
     useEffect(() => {
         GetHero();
         GetComics();
+        setRemoveLoading(false)
     }, [])
 
     return (
         <>
             <HeroeContainer>
+            {!removeLoading && <Loading />}
                 {character &&
                     (<>
                         <h1>{character.name}</h1>

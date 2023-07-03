@@ -5,6 +5,7 @@ import md5 from "md5";
 import HeroeCard from "../components/HeroeCard";
 import getHeroes from "../services/instanceAxios";
 import { Card, Container, Result } from "../components/Styled-components/HomeAndSearchStyles";
+import Loading from "../components/Loading";
 
 const public_key = import.meta.env.VITE_API_PUBLIC_KEY;
 const private_key = import.meta.env.VITE_API_PRIVATE_KEY;
@@ -16,8 +17,8 @@ const hash = md5(time_stamp + private_key + public_key);
 const Search = () => {
     const [searchParams] = useSearchParams();
     const [heroes, setHeroes] = useState([]);
-    const [load, setLoad] = useState(true);
     const results = searchParams.get("nameStartsWith");
+    const [removeLoading, setRemoveLoading] = useState(false);
 
     const url = `${base_url}?nameStartsWith=${results}&ts=${time_stamp}&apikey=${public_key}&hash=${hash}`;
 
@@ -25,23 +26,29 @@ const Search = () => {
         const response = await getHeroes.get(`${url}`)
         setHeroes(response.data.data.results);
     }
+    setTimeout(() => {
+        setRemoveLoading(true);
+    }, 3000);
+
     useEffect(() => {
-        setLoad(false);
+
         findHeroes();
+        setRemoveLoading(false);
+
         
     }, [results])
     
     return (
         <Container>
+            {!removeLoading && <Loading />}
             <h2>
                 Results for
                 <Result> {results}</Result>
             </h2>
-                {heroes.length === 0 ?(<p>Not found!</p>):("")}
-            {load === true ?
+            {heroes && heroes.length === 0 ?
                 (<>
+                    <p>Not found!</p>
 
-                    <p>loading...</p>
                 </>
                 ) : (
                     <Card>
