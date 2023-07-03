@@ -5,8 +5,9 @@ import instanceAxios from "../services/instanceAxios";
 import md5 from "md5";
 
 //import "./Pages.css";
-import { Card, ComicCard, ComicContainer, Description, HeroeContainer, Hr, NotDescription } from "../components/Styled-components/HeroeStyles";
+import { Card, Description, HeroeContainer, Hr, NotDescription } from "../components/Styled-components/HeroeStyles";
 import { HeroeCardContainer} from "../components/Styled-components/HeroeStyles";
+import { ComicCard, ComicContainer } from "../components/Styled-components/ComicStyles";
 
 
 const public_key = import.meta.env.VITE_API_PUBLIC_KEY;
