@@ -101,11 +101,13 @@ border:2px solid #E61C23;
 
 @media screen and (min-width:480px) {
 /* average*/
+align-items: center;
+margin-bottom: 4rem;
 
-    & img{
+& img{
         max-width:45vw;
-        margin-top: 2rem;
-        height: 40vh;
+        margin-top: 0rem;
+        min-height: 40vh !important;
     } 
 }
 
@@ -150,7 +152,7 @@ height: 40vh  ;
 @media screen and (min-width:480px) {
 /* average*/
 align-items: start;
-min-height: 40vh; 
+/* min-height: 40vh;  */
 & img{
 margin-top:2rem;
 }
@@ -231,6 +233,7 @@ width: 80vw;
 width: 45%;
 min-height: 40vh  ;
 margin-left: .5rem;
+/* margin-bottom: 5rem; */
 height: 100px;
     
 }
