@@ -34,6 +34,8 @@ width: 46vw;
     width: 25%;
     height: 50vh;
     align-items: center;
+    margin-bottom: 4rem;
+
 }
 
 `
@@ -67,6 +69,7 @@ width: 30vw;
 @media screen and (min-width:1200px){
     /*large */
     width: 20vw;
+
     }
 
     & h3 {

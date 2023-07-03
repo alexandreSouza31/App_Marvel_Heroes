@@ -51,8 +51,8 @@ const Heroe = () => {
 
     return (
         <>
+        {!removeLoading && <Loading />}
             <HeroeContainer>
-            {!removeLoading && <Loading />}
                 {character &&
                     (<>
                         <h1>{character.name}</h1>
