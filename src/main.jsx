@@ -6,7 +6,7 @@ import App from './App.jsx'
 import Home from './pages/Home.jsx'
 import Heroe from './pages/Heroe.jsx'
 import Search from './pages/Search.jsx'
-import { GlobalStyle } from './components/Styled-components/GlobalStyles.jsx'
+import { GlobalStyle } from './components/Styled-components/layoutStyles/GlobalStyles.jsx'
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(

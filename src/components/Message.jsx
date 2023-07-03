@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Dialog } from "./Styled-components/MessageStyles";
+import { Dialog } from "./Styled-components/layoutStyles/MessageStyles";
 
 function Message({ msg }) {
     const [visible, setVisible] = useState(false)

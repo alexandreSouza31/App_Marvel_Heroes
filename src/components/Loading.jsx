@@ -1,5 +1,5 @@
 import loading_img from "../assets/loading.gif"
-import { Dialog } from "./Styled-components/LoadingStyles"
+import { Dialog } from "./Styled-components/layoutStyles/LoadingStyles"
 
 
 const Loading = () => {

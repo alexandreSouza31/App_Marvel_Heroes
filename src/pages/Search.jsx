@@ -4,8 +4,9 @@ import { useSearchParams } from "react-router-dom";
 import md5 from "md5";
 import HeroeCard from "../components/HeroeCard";
 import getHeroes from "../services/instanceAxios";
-import { Card, Container, Result } from "../components/Styled-components/HomeAndSearchStyles";
 import Loading from "../components/Loading";
+
+import { Card, Container, Result } from "../components/Styled-components/pageStyles/HomeAndSearchStyles";
 
 const public_key = import.meta.env.VITE_API_PUBLIC_KEY;
 const private_key = import.meta.env.VITE_API_PRIVATE_KEY;

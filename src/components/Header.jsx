@@ -1,8 +1,8 @@
 import { NavLink, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { BsSearch } from "react-icons/bs";
-import { HeaderStyles } from "./Styled-components/HeaderStyles";
 import Message from "./Message";
+import { HeaderStyles } from "./Styled-components/layoutStyles/HeaderStyles";
 
 
 const Header = () => {

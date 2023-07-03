@@ -5,10 +5,9 @@ import instanceAxios from "../services/instanceAxios";
 import md5 from "md5";
 
 //import "./Pages.css";
-import { Card, Description, HeroeContainer, NotDescription } from "../components/Styled-components/HeroeStyles";
-import { HeroeCardContainer} from "../components/Styled-components/HeroeStyles";
-import { ComicCard, ComicContainer, Hr } from "../components/Styled-components/ComicStyles";
 import Loading from "../components/Loading";
+import { Card, Description, HeroeCardContainer, HeroeContainer, NotDescription } from "../components/Styled-components/pageStyles/HeroeStyles";
+import { ComicCard, ComicContainer, Hr } from "../components/Styled-components/pageStyles/ComicStyles";
 
 
 const public_key = import.meta.env.VITE_API_PUBLIC_KEY;
@@ -81,7 +80,7 @@ const Heroe = () => {
 
                     </>)}
             </HeroeContainer>
-            <Hr />
+            <Hr/>
             <ComicContainer>
                 <h3>Showed up on the comics series:</h3>
                 {dataComics && dataComics.length === 0?(<p>Not found</p>):("")}

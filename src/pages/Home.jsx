@@ -3,8 +3,9 @@ import instanceAxios from "../services/instanceAxios";
 import md5 from "md5";
 import HeroeCard from "../components/HeroeCard";
 
-import { Card, Container } from "../components/Styled-components/HomeAndSearchStyles";
 import Loading from "../components/Loading";
+import { Card, Container } from "../components/Styled-components/pageStyles/HomeAndSearchStyles";
+// import { Card } from "../components/Styled-components/pageStyles/HeroeStyles";
 
 const public_key = import.meta.env.VITE_API_PUBLIC_KEY;
 const private_key = import.meta.env.VITE_API_PRIVATE_KEY;
