@@ -2,36 +2,30 @@ import styled from "styled-components"
 
 export const Dialog = styled.dialog`
 width: 100vw;
-height: 100vh;
- display: flex;
+height: 200%;
+display: flex;
 flex-direction: column;
 align-items: center;
 justify-content: center;
 margin: 0 auto;
 position: absolute;
-top:15%;
+top:0%;
 text-align: center;
 background-color: #000000ca;
 
-
 & img{
-    width: 200px;
+    max-width: 150px;
 }
 
 @media screen and (max-height:300px) {
     /* very small*/
 top: 45%;
+}
 
-& img{
-    width: 150px;
-}
-}
-@media screen and (min-height:301px) and (max-height:800px) {
+@media screen and (min-height:801px) {
     /* small*/
-top: 20%;
+top: 15%;
+height: 100%;
 
-& img{
-    width: 150px;
-    }
 }
 `
