@@ -82,7 +82,7 @@ min-height: 20vh;
 min-height: 39.5vh;
 float:left;
 border-radius: 4px;
-border:1px solid #E61C23;
+border:2px solid #E61C23;
 
 }
 
@@ -133,7 +133,7 @@ border:1px solid #E61C23;
 `
 
 export const HeroeCardContainer = styled.div`
-
+display: flex;
 height: 40vh !important;
 
 & img{
@@ -142,6 +142,7 @@ height: 40vh !important;
 
 @media screen and (min-width:480px) {
 /* small*/
+align-items: start;
 min-height: 40vh; 
 & img{
 margin-top:2rem;    }

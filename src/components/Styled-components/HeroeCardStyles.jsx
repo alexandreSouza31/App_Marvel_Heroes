@@ -5,9 +5,9 @@ export const HeroeCardContainer = styled.div`
 
 display: flex;
 flex-direction: column;
-justify-content: space-between;
+justify-content: center;
 align-items: center;
-margin-bottom: 1.5rem;
+margin-bottom: 0rem;
 
 & img{
     border: 2px solid gray;
@@ -26,8 +26,7 @@ width: 46vw;
     }
 }
 @media screen and (min-width:480px) {
-    min-height: 50vh;   
-height: 50vh;
+    min-height: 40vh;   
 }
 
 @media screen and (min-width:1200px){
@@ -38,43 +37,43 @@ height: 50vh;
 }
 
 `
-export const ImgContainer = styled.div`
-border: 2px solid gray;
-max-width: 45vw;
-height: 30.5vh;
-border-radius: 4px;
-transition: .4s;
+// export const ImgContainer = styled.div`
+// border: 2px solid gray;
+// max-width: 45vw;
+// height: 30.5vh;
+// border-radius: 4px;
+// transition: .4s;
 
-& img{
+// & img{
 
-    border: 2px solid gray;
-}
+//     border: 2px solid gray;
+// }
 
-& img:hover{
-    border-color: #E61C23;
-}
+// & img:hover{
+//     border-color: #E61C23;
+// }
 
-@media screen and (max-width:360px) {
-    /* small*/
-width: 46vw;
-    & img {
-        height: 30vh;
-    }
+// @media screen and (max-width:360px) {
+//     /* small*/
+// width: 46vw;
+//     & img {
+//         height: 30vh;
+//     }
 
-@media screen and (min-width:600px) {
-    /* average*/
-width: 29.5vw;
-height: 30vh; 
-    }
+// @media screen and (min-width:600px) {
+//     /* average*/
+// width: 29.5vw;
+// height: 30vh; 
+//     }
 
-@media screen and (min-width:1200px){
-    /*large */
-    width: 20vw;
-    height: 50vh;
-    }
-}
+// @media screen and (min-width:1200px){
+//     /*large */
+//     width: 20vw;
+//     height: 50vh;
+//     }
+// }
 
-`
+// `
 export const LinkContainer = styled.div`
 display: flex;
 flex-direction: column;
@@ -91,7 +90,6 @@ width: 45.5vw;
 @media screen and (max-width:360px) {
     /* small*/
     justify-content: space-between;
-
     & h3 {
         font-size: 1rem;
         max-height: 60px;
