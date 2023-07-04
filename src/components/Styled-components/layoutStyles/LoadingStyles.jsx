@@ -2,7 +2,7 @@ import styled from "styled-components"
 
 export const Dialog = styled.dialog`
 width: 100vw;
-height: 200%;
+height: 150%;
 display: flex;
 flex-direction: column;
 align-items: center;
@@ -19,6 +19,7 @@ background-color: #000000ca;
 
 @media screen and (max-height:300px) {
     /* very small*/
+height: 150%;
 top: 45%;
 }
 
