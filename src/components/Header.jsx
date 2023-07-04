@@ -16,10 +16,10 @@ const Header = () => {
     const [message, setMessage] = useState("");
 
     const handleSubmit = (e) => {
-        setMessage("");
         e.preventDefault();
-        
-        if (setSearch==="") {
+        // setMessage("");
+
+        if (search==="") {
             setMessage("Type something to search!");
             return;
         }
@@ -40,11 +40,12 @@ const Header = () => {
                     type="text"
                     placeholder="search a character"
                     onChange={(e) => setSearch(e.target.value)}
+                    onFocus={() => setMessage("")}
                     value={search}
                 />
                 <button type="submit"><BsSearch /></button>
             </form>
-            {message && <Message msg={<p>{message}</p>}></Message>}
+            <Message setMessage={setMessage} msg={message ? <p>{message}</p> : ""}></Message>
 
         </HeaderStyles>
     )

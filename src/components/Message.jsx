@@ -1,20 +1,21 @@
 import { useState, useEffect } from "react";
 import { Dialog } from "./Styled-components/layoutStyles/MessageStyles";
 
-function Message({ msg }) {
+function Message({ msg,setMessage }) {
     const [visible, setVisible] = useState(false)
 
     useEffect(() => {
         if (!msg) {
-            setVisible(false)
-            return
+            setVisible(false);
+            return;
         }
 
         setVisible(true)
 
         const timer = setTimeout(() => {
-            setVisible(false)
-        }, 3000)
+            setVisible(false);
+            setMessage("");
+          }, 3000);
         
         return () => clearTimeout(timer)
         
