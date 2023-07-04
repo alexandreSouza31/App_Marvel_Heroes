@@ -29,7 +29,7 @@ const Search = () => {
     }
     setTimeout(() => {
         setRemoveLoading(true);
-    }, 3000);
+    }, 2000);
 
     useEffect(() => {
 
